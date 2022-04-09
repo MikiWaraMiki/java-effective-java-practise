@@ -16,6 +16,9 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.22'
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
 
+    // https://mvnrepository.com/artifact/com.github.f4b6a3/ulid-creator
+    implementation 'com.github.f4b6a3:ulid-creator:4.1.2'
+
     testCompileOnly 'org.projectlombok:lombok:1.18.22'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
 }
