@@ -40,4 +40,10 @@ class PhoneNumberTest {
             assertNotEquals(phoneNumber1, phoneNumber2);
         }
     }
+
+    @Nested
+    @DisplayName("compareTo")
+    class CompareToTest {
+
+    }
 }
