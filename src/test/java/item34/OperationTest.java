@@ -46,4 +46,46 @@ class OperationTest {
             assertEquals(2.0, result);
         }
     }
+
+    @Nested
+    class fromString {
+        @Test
+        void 足し算のインスタンスを取得できること() {
+            val plus = Operation.fromString("+");
+
+            assertTrue(plus.isPresent());
+            assertEquals("+", plus.get().toString());
+        }
+
+        @Test
+        void 引き算のインスタンスを取得できること() {
+            val minus = Operation.fromString("-");
+
+            assertTrue(minus.isPresent());
+            assertEquals("-", minus.get().toString());
+        }
+
+        @Test
+        void 掛け算のインスタンスを取得できること() {
+            val times = Operation.fromString("*");
+
+            assertTrue(times.isPresent());
+            assertEquals("*", times.get().toString());
+        }
+
+        @Test
+        void 割り算のインスタンスを取得できること() {
+            val divide = Operation.fromString("/");
+
+            assertTrue(divide.isPresent());
+            assertEquals("/", divide.get().toString());
+        }
+
+        @Test
+        void 登録されていない算術演算子の場合はnullをもつOptionalを返すこと() {
+            val unSupported = Operation.fromString("e");
+
+            assertTrue(unSupported.isEmpty());
+        }
+    }
 }
